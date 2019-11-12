@@ -8,8 +8,8 @@ public class Desafio {
 	@Test
 	public void desafioImpar() {
 		ApplicationDesafio application = new ApplicationDesafio();
-		Integer expected = 13;
-		Integer response = application.impar(26);
+		Integer expected = 14;
+		Integer response = application.impar(27);
 		Assert.assertEquals(expected, response);
 	}
 }
