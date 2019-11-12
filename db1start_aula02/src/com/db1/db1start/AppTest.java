@@ -39,6 +39,13 @@ public class AppTest {
 		Assert.assertEquals(expected, response);
 	}
 	
+	public void deveVerPar(){
+		ApplicationInteger application = new ApplicationInteger();
+		Boolean expected = true;
+		Boolean response = application.par(8);
+		Assert.assertEquals(expected, response);
+	}
+	
 	@Test
 	public void deveVerMaior(){
 		ApplicationInteger application = new ApplicationInteger();
@@ -50,8 +57,8 @@ public class AppTest {
 	@Test
 	public void deveVerQntdImpares(){
 		ApplicationInteger application = new ApplicationInteger();
-		Integer expected = 50;
-		Integer response = application.qntdimpar(100);
+		Integer expected = 500000;
+		Integer response = application.qntdimpar(1000000);
 		Assert.assertEquals(expected, response);	
 	}
 	

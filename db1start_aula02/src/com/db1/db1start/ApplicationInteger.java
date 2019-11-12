@@ -17,6 +17,13 @@ public class ApplicationInteger {
 	public Integer div(Integer numero1, Integer numero2) {
 		return numero1 / numero2;
 	}
+	
+	public Boolean par(Integer numero1) {
+		if(numero1%2 == 0) {
+			return true;
+		}
+		return false;
+	}
 
 	public Integer maior(Integer numero1, Integer numero2) {
 		if (numero1 < numero2) {
