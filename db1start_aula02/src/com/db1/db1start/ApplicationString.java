@@ -1,39 +1,39 @@
 package com.db1.db1start;
 
 public class ApplicationString {
-	
-	public String Upper(String txt) {
+
+	public String upper(String txt) {
 		return txt.toUpperCase();
 	}
-	
-	public String Lower(String txt) {
+
+	public String lower(String txt) {
 		return txt.toLowerCase();
 	}
 
-	public Integer TotalLetras(String txt) {
+	public Integer totalLetras(String txt) {
 		txt = txt.trim();
 		Integer txt1 = txt.length();
 		return txt1;
 	}
-	
-	public Integer TotalLetrasEspaco(String txt) {
+
+	public Integer totalLetrasEspaco(String txt) {
 		return txt.length();
 	}
-	
-	public String PalavraSemEspaco(String txt) {
+
+	public String palavraSemEspaco(String txt) {
 		return txt.trim();
 	}
-	
-	public String Nome4PrimeirasLetras(String txt) {
+
+	public String nome4PrimeirasLetras(String txt) {
 		txt.trim();
 		return txt.substring(0, 4);
 	}
-	
-	public String NomePartir3Letra(String txt) {
+
+	public String nomePartir3Letra(String txt) {
 		txt.trim();
 		return txt.substring(2);
 	}
-	
+
 //	public Integer vogais(String txt) {
 //		String vogal;
 //		txt.trim();
@@ -48,12 +48,11 @@ public class ApplicationString {
 //		String[] txtseparado = txt.split(",");
 //		return txtseparado;
 //	}
-	
-	public String Aluno(String nomecompleto) {
+
+	public String aluno(String nomecompleto) {
 		Integer i = nomecompleto.indexOf(' ');
-	    String nome = nomecompleto.substring(i+1, nomecompleto.length());
-	    String aluno = "Aluno "+nome;
-	    return aluno;
+		String nome = nomecompleto.substring(i + 1, nomecompleto.length());
+		String aluno = "Aluno " + nome;
+		return aluno;
 	}
 }
-

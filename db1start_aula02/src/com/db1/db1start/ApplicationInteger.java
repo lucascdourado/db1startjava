@@ -17,9 +17,9 @@ public class ApplicationInteger {
 	public Integer div(Integer numero1, Integer numero2) {
 		return numero1 / numero2;
 	}
-	
+
 	public Boolean par(Integer numero1) {
-		if(numero1%2 == 0) {
+		if (numero1 % 2 == 0) {
 			return true;
 		}
 		return false;
@@ -36,7 +36,7 @@ public class ApplicationInteger {
 		Integer i = 0;
 		Integer i2 = 1;
 		while (i2 <= numero1) {
-			if ((i2%2)!=0) {
+			if ((i2 % 2) != 0) {
 				i++;
 			}
 			i2++;

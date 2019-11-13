@@ -5,124 +5,122 @@ import org.junit.Test;
 import junit.framework.Assert;
 
 public class AppTest {
-	
-	//EXERCICIO INTEGER
+
+	// EXERCICIO INTEGER
 	@Test
-	public void deveSomar(){
+	public void deveSomar() {
 		ApplicationInteger application = new ApplicationInteger();
 		Integer expected = 8;
 		Integer response = application.soma(5, 3);
 		Assert.assertEquals(expected, response);
 	}
-	
+
 	@Test
-	public void deveSubtrair(){
+	public void deveSubtrair() {
 		ApplicationInteger application = new ApplicationInteger();
 		Integer expected = 2;
 		Integer response = application.sub(5, 3);
 		Assert.assertEquals(expected, response);
 	}
-	
+
 	@Test
-	public void deveMultiplicar(){
+	public void deveMultiplicar() {
 		ApplicationInteger application = new ApplicationInteger();
 		Integer expected = 9;
 		Integer response = application.multi(3, 3);
 		Assert.assertEquals(expected, response);
 	}
-	
+
 	@Test
-	public void deveDividir(){
+	public void deveDividir() {
 		ApplicationInteger application = new ApplicationInteger();
 		Integer expected = 5;
 		Integer response = application.div(10, 2);
 		Assert.assertEquals(expected, response);
 	}
-	
+
 	@Test
-	public void deveVerPar(){
+	public void deveVerPar() {
 		ApplicationInteger application = new ApplicationInteger();
 		Boolean expected = true;
 		Boolean response = application.par(8);
 		Assert.assertEquals(expected, response);
 	}
-	
+
 	@Test
-	public void deveVerMaior(){
+	public void deveVerMaior() {
 		ApplicationInteger application = new ApplicationInteger();
 		Integer expected = 9;
 		Integer response = application.maior(9, 5);
-		Assert.assertEquals(expected, response);	
+		Assert.assertEquals(expected, response);
 	}
-	
+
 	@Test
-	public void deveVerQntdImpares(){
+	public void deveVerQntdImpares() {
 		ApplicationInteger application = new ApplicationInteger();
 		Integer expected = 14;
 		Integer response = application.qntdimpar(27);
-		Assert.assertEquals(expected, response);	
+		Assert.assertEquals(expected, response);
 	}
-	
-	//------------------------------------------------------------------------------------------------//
-	//EXERCICIOS STRING
+
+	// ------------------------------------------------------------------------------------------------//
+	// EXERCICIOS STRING
 	@Test
-	public void deveRetornarMaiusculo(){
+	public void deveRetornarMaiusculo() {
 		ApplicationString application = new ApplicationString();
 		String expected = "TESTE";
-		String response = application.Upper("teste");
-		Assert.assertEquals(expected, response);	
+		String response = application.upper("teste");
+		Assert.assertEquals(expected, response);
 	}
-	
+
 	@Test
-	public void deveRetornarMinusculo(){
+	public void deveRetornarMinusculo() {
 		ApplicationString application = new ApplicationString();
 		String expected = "teste";
-		String response = application.Lower("TESTE");
-		Assert.assertEquals(expected, response);	
+		String response = application.lower("TESTE");
+		Assert.assertEquals(expected, response);
 	}
-	
+
 	@Test
-	public void deveRetornarTotalDeLetras(){
+	public void deveRetornarTotalDeLetras() {
 		ApplicationString application = new ApplicationString();
 		Integer expected = 8;
-		Integer response = application.TotalLetras("DB1START");
-		Assert.assertEquals(expected, response);	
+		Integer response = application.totalLetras("DB1START");
+		Assert.assertEquals(expected, response);
 	}
-	
+
 	@Test
-	public void deveRetornarTotalDeLetrasEspaco(){
+	public void deveRetornarTotalDeLetrasEspaco() {
 		ApplicationString application = new ApplicationString();
 		Integer expected = 10;
-		Integer response = application.TotalLetrasEspaco(" DB1START ");
-		Assert.assertEquals(expected, response);	
+		Integer response = application.totalLetrasEspaco(" DB1START ");
+		Assert.assertEquals(expected, response);
 	}
-	
+
 	@Test
-	public void deveRetornarPalavraSemEspaco(){
+	public void deveRetornarPalavraSemEspaco() {
 		ApplicationString application = new ApplicationString();
 		String expected = "DB1START";
-		String response = application.PalavraSemEspaco(" DB1START ");
-		Assert.assertEquals(expected, response);	
+		String response = application.palavraSemEspaco(" DB1START ");
+		Assert.assertEquals(expected, response);
 	}
-	
+
 	@Test
-	public void deveRetornarNome4Letras(){
+	public void deveRetornarNome4Letras() {
 		ApplicationString application = new ApplicationString();
 		String expected = "Luca";
-		String response = application.Nome4PrimeirasLetras("Lucas Dourado");
-		Assert.assertEquals(expected, response);	
+		String response = application.nome4PrimeirasLetras("Lucas Dourado");
+		Assert.assertEquals(expected, response);
 	}
-	
+
 	@Test
-	public void deveRetornarNomePartir6Letra(){
+	public void deveRetornarNomePartir6Letra() {
 		ApplicationString application = new ApplicationString();
 		String expected = "cas Dourado";
-		String response = application.NomePartir3Letra("Lucas Dourado");
-		Assert.assertEquals(expected, response);	
+		String response = application.nomePartir3Letra("Lucas Dourado");
+		Assert.assertEquals(expected, response);
 	}
-	
-	
-	
+
 //	@Test
 //	public void vogais() {
 //		ApplicationString application = new ApplicationString();
@@ -138,47 +136,46 @@ public class AppTest {
 //		String[] response = application.SepararPalavras("banana, maçã, melancia");
 //		Assert.assertEquals(expected, response);
 //	}
-	
+
 	@Test
-	public void Aluno() {
+	public void aluno() {
 		ApplicationString application = new ApplicationString();
 		String expected = "Aluno Dourado";
-		String response = application.Aluno("Lucas Dourado");
+		String response = application.aluno("Lucas Dourado");
 		Assert.assertEquals(expected, response);
 	}
-	
 
-	//------------------------------------------------------------------------------------------------//
-	//EXERCICIOS DOUBLE
+	// ------------------------------------------------------------------------------------------------//
+	// EXERCICIOS DOUBLE
 	@Test
-	public void menorEntre2(){
+	public void menorEntre2() {
 		ApplicationDouble application = new ApplicationDouble();
-		double expected = 3;
-		double response = application.menor2(5, 3);
+		double expected = 3.0;
+		double response = application.menor2(5.0, 3.0);
 		Assert.assertEquals(expected, response);
 	}
-	
+
 	@Test
-	public void menorEntre3(){
+	public void menorEntre3() {
 		ApplicationDouble application = new ApplicationDouble();
-		double expected = 2;
-		double response = application.menor3(5, 9, 2);
+		double expected = 2.0;
+		double response = application.menor3(5.0, 9.0, 2.0);
 		Assert.assertEquals(expected, response);
 	}
-	
+
 	@Test
-	public void media(){
+	public void media() {
 		ApplicationDouble application = new ApplicationDouble();
-		double expected = 3;
-		double response = application.media(5, 3, 1);
+		double expected = 3.0;
+		double response = application.media(5.0, 3.0, 1.0);
 		Assert.assertEquals(expected, response);
 	}
-	
+
 	@Test
 	public void triangulo() {
 		ApplicationDouble application = new ApplicationDouble();
 		double expected = 7.5;
-		double response = application.triangulo(3,5);
+		double response = application.triangulo(3.0, 5.0);
 		Assert.assertEquals(expected, response);
 	}
 
