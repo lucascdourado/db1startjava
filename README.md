@@ -1,3 +1,3 @@
 # DB1STARTJAVA
 
-repositório das aulas de Java do curso DB1START
+REPOSITÓRIO DAS AULAS DE JAVA DO DB1START
