@@ -85,9 +85,8 @@ public class ApplicationString {
 //	}
 
 	public Integer vogais(String txt) {
-		int total = txt.length();
 		int consoante = txt.toLowerCase().replaceAll("[a,e,i,o,u]", "").trim().length();
-		return total - consoante;
+		return txt.length() - consoante;
 	}
 
 	public String inverterTexto(String txt) {
