@@ -125,7 +125,7 @@ public class AppTest {
 	public void deveRetornarTotalVogais() {
 		ApplicationString application = new ApplicationString();
 		Integer expected = 3;
-		Integer response = application.vogais("Lucas");
+		Integer response = application.vogais("Maiko");
 		Assert.assertEquals(expected, response);
 	}
 

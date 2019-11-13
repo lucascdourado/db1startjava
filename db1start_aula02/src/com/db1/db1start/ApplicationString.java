@@ -22,11 +22,10 @@ public class ApplicationString {
 //		}
 //		return (total - numero);
 //	}
-	
+
 	public Integer totalLetras(String txt) {
-		return ((txt.replaceAll("[0-9]", "" )).trim()).length();
+		return ((txt.replaceAll("[0-9]", "")).trim()).length();
 	}
-		
 
 //	public Integer totalLetrasEspaco(String txt) {
 //		Integer numero = 0;
@@ -40,9 +39,9 @@ public class ApplicationString {
 //		}
 //		return (total - numero);
 //	}
-	
+
 	public Integer totalLetrasEspaco(String txt) {
-		return ((txt.replaceAll("[0-9]", "" )).trim()).length();
+		return ((txt.replaceAll("[0-9]", "")).trim()).length();
 	}
 
 	public String palavraSemEspaco(String txt) {
@@ -73,17 +72,22 @@ public class ApplicationString {
 		return aluno;
 	}
 
+//	public Integer vogais(String txt) {
+//		Integer vogais = 0;
+//		txt.toLowerCase();
+//		for (Integer i = 0; i < txt.length(); i++) {
+//			if (txt.charAt(i) == 'a' | txt.charAt(i) == 'e' | txt.charAt(i) == 'i' | txt.charAt(i) == 'o'
+//					| txt.charAt(i) == 'u') {
+//				vogais++;
+//			}
+//		}
+//		return vogais;
+//	}
+
 	public Integer vogais(String txt) {
-		Integer consoante = 0;
-		Integer total = txt.length();
-		txt.toLowerCase();
-		for (Integer i = 0; i < total; i++) {
-			if (txt.charAt(i) == 'a' | txt.charAt(i) == 'e' | txt.charAt(i) == 'i' | txt.charAt(i) == 'o'
-					| txt.charAt(i) == 'u') {
-				consoante++;
-			}
-		}
-		return (total - consoante);
+		int total = txt.length();
+		int consoante = txt.toLowerCase().replaceAll("[a,e,i,o,u]", "").trim().length();
+		return total - consoante;
 	}
 
 	public String inverterTexto(String txt) {
