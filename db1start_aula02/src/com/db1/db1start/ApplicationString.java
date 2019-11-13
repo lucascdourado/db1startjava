@@ -51,7 +51,7 @@ public class ApplicationString {
 	}
 
 	public String SepararPalavras(String txt) {
-		String[] txtseparado = txt.split(", ", 3);
+		String[] txtseparado = txt.split(", ");
 		return (txtseparado[0] + " \n" + txtseparado[1] + " \n" + txtseparado[2]);
 	}
 
