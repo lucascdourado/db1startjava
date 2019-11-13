@@ -39,6 +39,7 @@ public class AppTest {
 		Assert.assertEquals(expected, response);
 	}
 	
+	@Test
 	public void deveVerPar(){
 		ApplicationInteger application = new ApplicationInteger();
 		Boolean expected = true;
@@ -57,11 +58,12 @@ public class AppTest {
 	@Test
 	public void deveVerQntdImpares(){
 		ApplicationInteger application = new ApplicationInteger();
-		Integer expected = 500000;
-		Integer response = application.qntdimpar(1000000);
+		Integer expected = 14;
+		Integer response = application.qntdimpar(27);
 		Assert.assertEquals(expected, response);	
 	}
 	
+	//------------------------------------------------------------------------------------------------//
 	//EXERCICIOS STRING
 	@Test
 	public void deveRetornarMaiusculo(){
@@ -103,7 +105,81 @@ public class AppTest {
 		Assert.assertEquals(expected, response);	
 	}
 	
+	@Test
+	public void deveRetornarNome4Letras(){
+		ApplicationString application = new ApplicationString();
+		String expected = "Luca";
+		String response = application.Nome4PrimeirasLetras("Lucas Dourado");
+		Assert.assertEquals(expected, response);	
+	}
+	
+	@Test
+	public void deveRetornarNomePartir6Letra(){
+		ApplicationString application = new ApplicationString();
+		String expected = "cas Dourado";
+		String response = application.NomePartir3Letra("Lucas Dourado");
+		Assert.assertEquals(expected, response);	
+	}
+	
+	
+	
+//	@Test
+//	public void vogais() {
+//		ApplicationString application = new ApplicationString();
+//		Integer expected = 3;
+//		Integer response = application.vogais("Lucas");
+//		Assert.assertEquals(expected, response);
+//	}
+//	
+//	@Test
+//	public void SepararPalavras() {
+//		ApplicationString application = new ApplicationString();
+//		String expected = "banana \n maça \n melancia";
+//		String[] response = application.SepararPalavras("banana, maçã, melancia");
+//		Assert.assertEquals(expected, response);
+//	}
+	
+	@Test
+	public void Aluno() {
+		ApplicationString application = new ApplicationString();
+		String expected = "Aluno Dourado";
+		String response = application.Aluno("Lucas Dourado");
+		Assert.assertEquals(expected, response);
+	}
+	
 
-
+	//------------------------------------------------------------------------------------------------//
+	//EXERCICIOS DOUBLE
+	@Test
+	public void menorEntre2(){
+		ApplicationDouble application = new ApplicationDouble();
+		double expected = 3;
+		double response = application.menor2(5, 3);
+		Assert.assertEquals(expected, response);
+	}
+	
+	@Test
+	public void menorEntre3(){
+		ApplicationDouble application = new ApplicationDouble();
+		double expected = 2;
+		double response = application.menor3(5, 9, 2);
+		Assert.assertEquals(expected, response);
+	}
+	
+	@Test
+	public void media(){
+		ApplicationDouble application = new ApplicationDouble();
+		double expected = 3;
+		double response = application.media(5, 3, 1);
+		Assert.assertEquals(expected, response);
+	}
+	
+	@Test
+	public void triangulo() {
+		ApplicationDouble application = new ApplicationDouble();
+		double expected = 7.5;
+		double response = application.triangulo(3,5);
+		Assert.assertEquals(expected, response);
+	}
 
 }
