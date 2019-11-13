@@ -10,30 +10,39 @@ public class ApplicationString {
 		return txt.toLowerCase();
 	}
 
+//	public Integer totalLetras(String txt) {
+//		Integer numero = 0;
+//		Integer total = (txt.trim()).length();
+//		for (Integer i = 0; i < total; i++) {
+//			if (txt.charAt(i) == '0' | txt.charAt(i) == '1' | txt.charAt(i) == '2' | txt.charAt(i) == '3'
+//					| txt.charAt(i) == '4' | txt.charAt(i) == '5' | txt.charAt(i) == '6' | txt.charAt(i) == '7'
+//					| txt.charAt(i) == '8' | txt.charAt(i) == '9') {
+//				numero++;
+//			}
+//		}
+//		return (total - numero);
+//	}
+	
 	public Integer totalLetras(String txt) {
-		Integer numero = 0;
-		Integer total = (txt.trim()).length();
-		for (Integer i = 0; i < total; i++) {
-			if (txt.charAt(i) == '0' | txt.charAt(i) == '1' | txt.charAt(i) == '2' | txt.charAt(i) == '3'
-					| txt.charAt(i) == '4' | txt.charAt(i) == '5' | txt.charAt(i) == '6' | txt.charAt(i) == '7'
-					| txt.charAt(i) == '8' | txt.charAt(i) == '9') {
-				numero++;
-			}
-		}
-		return (total - numero);
+		return ((txt.replaceAll("[0-9]", "" )).trim()).length();
 	}
+		
 
+//	public Integer totalLetrasEspaco(String txt) {
+//		Integer numero = 0;
+//		Integer total = (txt.trim()).length();
+//		for (Integer i = 0; i < total; i++) {
+//			if (txt.charAt(i) == '0' | txt.charAt(i) == '1' | txt.charAt(i) == '2' | txt.charAt(i) == '3'
+//					| txt.charAt(i) == '4' | txt.charAt(i) == '5' | txt.charAt(i) == '6' | txt.charAt(i) == '7'
+//					| txt.charAt(i) == '8' | txt.charAt(i) == '9') {
+//				numero++;
+//			}
+//		}
+//		return (total - numero);
+//	}
+	
 	public Integer totalLetrasEspaco(String txt) {
-		Integer numero = 0;
-		Integer total = (txt.trim()).length();
-		for (Integer i = 0; i < total; i++) {
-			if (txt.charAt(i) == '0' | txt.charAt(i) == '1' | txt.charAt(i) == '2' | txt.charAt(i) == '3'
-					| txt.charAt(i) == '4' | txt.charAt(i) == '5' | txt.charAt(i) == '6' | txt.charAt(i) == '7'
-					| txt.charAt(i) == '8' | txt.charAt(i) == '9') {
-				numero++;
-			}
-		}
-		return (total - numero);
+		return ((txt.replaceAll("[0-9]", "" )).trim()).length();
 	}
 
 	public String palavraSemEspaco(String txt) {
@@ -41,13 +50,11 @@ public class ApplicationString {
 	}
 
 	public String nome4PrimeirasLetras(String txt) {
-		txt.trim();
-		return txt.substring(0, 4);
+		return (txt.trim()).substring(0, 4);
 	}
 
 	public String nomePartir3Letra(String txt) {
-		txt.trim();
-		return txt.substring(2);
+		return (txt.trim()).substring(2);
 	}
 
 	public String SepararPalavras(String txt) {
