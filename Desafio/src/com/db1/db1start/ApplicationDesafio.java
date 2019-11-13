@@ -6,9 +6,9 @@ public class ApplicationDesafio {
 		if ((numero1) % 2 == 1) {
 			Integer resto;
 			resto = (numero1 - 1) / 2;
-			Integer resp;
-			resp = resto + 1;
-			return resp;
+			Integer resposta;
+			resposta = resto + 1;
+			return resposta;
 		}
 		return numero1 / 2;
 	}
