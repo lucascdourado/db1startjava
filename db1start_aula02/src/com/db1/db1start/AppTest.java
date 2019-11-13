@@ -84,15 +84,15 @@ public class AppTest {
 	@Test
 	public void deveRetornarTotalDeLetras() {
 		ApplicationString application = new ApplicationString();
-		Integer expected = 8;
-		Integer response = application.totalLetras("DB1START");
+		Integer expected = 7;
+		Integer response = application.totalLetrasEspaco(" DB1START ");
 		Assert.assertEquals(expected, response);
 	}
 
 	@Test
-	public void deveRetornarTotalDeLetrasEspaco() {
+	public void deveRetornarTotalDeLetrasSemEspaco() {
 		ApplicationString application = new ApplicationString();
-		Integer expected = 10;
+		Integer expected = 7;
 		Integer response = application.totalLetrasEspaco(" DB1START ");
 		Assert.assertEquals(expected, response);
 	}
@@ -121,27 +121,42 @@ public class AppTest {
 		Assert.assertEquals(expected, response);
 	}
 
-//	@Test
-//	public void vogais() {
-//		ApplicationString application = new ApplicationString();
-//		Integer expected = 3;
-//		Integer response = application.vogais("Lucas");
-//		Assert.assertEquals(expected, response);
-//	}
-//	
-//	@Test
-//	public void SepararPalavras() {
-//		ApplicationString application = new ApplicationString();
-//		String expected = "banana \n maça \n melancia";
-//		String[] response = application.SepararPalavras("banana, maçã, melancia");
-//		Assert.assertEquals(expected, response);
-//	}
+	@Test
+	public void deveRetornarTotalVogais() {
+		ApplicationString application = new ApplicationString();
+		Integer expected = 3;
+		Integer response = application.vogais("Lucas");
+		Assert.assertEquals(expected, response);
+	}
+
+	@Test
+	public void separarPalavras() {
+		ApplicationString application = new ApplicationString();
+		String expected = "banana \nmaçã \nmelancia";
+		String response = application.SepararPalavras("banana, maçã, melancia");
+		Assert.assertEquals(expected, response);
+	}
+
+	@Test
+	public void ultimas4Letras() {
+		ApplicationString application = new ApplicationString();
+		String expected = "rado";
+		String response = application.ultimas4Letras("Lucas Dourado");
+	}
 
 	@Test
 	public void aluno() {
 		ApplicationString application = new ApplicationString();
 		String expected = "Aluno Dourado";
 		String response = application.aluno("Lucas Dourado");
+		Assert.assertEquals(expected, response);
+	}
+
+	@Test
+	public void inverterTexto() {
+		ApplicationString application = new ApplicationString();
+		String expected = "etset";
+		String response = application.inverterTexto("teste");
 		Assert.assertEquals(expected, response);
 	}
 

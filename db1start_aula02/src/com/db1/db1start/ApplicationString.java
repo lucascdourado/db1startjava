@@ -11,13 +11,29 @@ public class ApplicationString {
 	}
 
 	public Integer totalLetras(String txt) {
-		txt = txt.trim();
-		Integer txt1 = txt.length();
-		return txt1;
+		Integer numero = 0;
+		Integer total = (txt.trim()).length();
+		for (Integer i = 0; i < total; i++) {
+			if (txt.charAt(i) == '0' | txt.charAt(i) == '1' | txt.charAt(i) == '2' | txt.charAt(i) == '3'
+					| txt.charAt(i) == '4' | txt.charAt(i) == '5' | txt.charAt(i) == '6' | txt.charAt(i) == '7'
+					| txt.charAt(i) == '8' | txt.charAt(i) == '9') {
+				numero++;
+			}
+		}
+		return (total - numero);
 	}
 
 	public Integer totalLetrasEspaco(String txt) {
-		return txt.length();
+		Integer numero = 0;
+		Integer total = (txt.trim()).length();
+		for (Integer i = 0; i < total; i++) {
+			if (txt.charAt(i) == '0' | txt.charAt(i) == '1' | txt.charAt(i) == '2' | txt.charAt(i) == '3'
+					| txt.charAt(i) == '4' | txt.charAt(i) == '5' | txt.charAt(i) == '6' | txt.charAt(i) == '7'
+					| txt.charAt(i) == '8' | txt.charAt(i) == '9') {
+				numero++;
+			}
+		}
+		return (total - numero);
 	}
 
 	public String palavraSemEspaco(String txt) {
@@ -34,25 +50,37 @@ public class ApplicationString {
 		return txt.substring(2);
 	}
 
-//	public Integer vogais(String txt) {
-//		String vogal;
-//		txt.trim();
-//		vogal = txt.replace("aeiouà-ú","");
-//		Integer totaltxt = txt.length();
-//		Integer totalvogal = vogal.length();
-//		Integer total = totaltxt - totalvogal;
-//		return total;
-//	}
-//	
-//	public String[] SepararPalavras(String txt) {
-//		String[] txtseparado = txt.split(",");
-//		return txtseparado;
-//	}
+	public String SepararPalavras(String txt) {
+		String[] txtseparado = txt.split(", ", 3);
+		return (txtseparado[0] + " \n" + txtseparado[1] + " \n" + txtseparado[2]);
+	}
 
-	public String aluno(String nomecompleto) {
-		Integer i = nomecompleto.indexOf(' ');
-		String nome = nomecompleto.substring(i + 1, nomecompleto.length());
+	public String ultimas4Letras(String txt) {
+		return (txt.substring(txt.length() - 4));
+	}
+
+	public String aluno(String txt) {
+		Integer i = txt.indexOf(' ');
+		String nome = txt.substring(i + 1, txt.length());
 		String aluno = "Aluno " + nome;
 		return aluno;
+	}
+
+	public Integer vogais(String txt) {
+		Integer consoante = 0;
+		Integer total = txt.length();
+		txt.toLowerCase();
+		for (Integer i = 0; i < total; i++) {
+			if (txt.charAt(i) == 'a' | txt.charAt(i) == 'e' | txt.charAt(i) == 'i' | txt.charAt(i) == 'o'
+					| txt.charAt(i) == 'u') {
+				consoante++;
+			}
+		}
+		return (total - consoante);
+	}
+
+	public String inverterTexto(String txt) {
+		String invertido = new StringBuilder(txt).reverse().toString();
+		return invertido;
 	}
 }
