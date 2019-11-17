@@ -14,9 +14,6 @@ import java.util.stream.Collectors;
 
 public class ExLista {
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
 
 		// Método que retorne os nomes das cores que você mais gosta
