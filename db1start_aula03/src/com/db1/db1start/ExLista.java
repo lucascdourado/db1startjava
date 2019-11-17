@@ -14,6 +14,9 @@ import java.util.stream.Collectors;
 
 public class ExLista {
 
+	/**
+	 * @param args
+	 */
 	public static void main(String[] args) {
 
 		// Método que retorne os nomes das cores que você mais gosta
@@ -101,6 +104,7 @@ public class ExLista {
 					Collectors.groupingBy(numero::getId, Collectors.mapping(numero::getName, Collectors.toList())));
 
 			System.out.println("Separando Numeros = " + multimap);
+			separar();
 		}
 
 	}
