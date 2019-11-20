@@ -1,0 +1,42 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ExInteiro<db1start_aula01>",
+            "request": "launch",
+            "mainClass": "db1start_aula01/com.db1.db1start.ExInteiro",
+            "projectName": "db1start_aula01"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ExMat1<db1start_aula01>",
+            "request": "launch",
+            "mainClass": "db1start_aula01/com.db1.db1start.ExMat1",
+            "projectName": "db1start_aula01"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ExMat2<db1start_aula01>",
+            "request": "launch",
+            "mainClass": "db1start_aula01/com.db1.db1start.ExMat2",
+            "projectName": "db1start_aula01"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ExTxt<db1start_aula01>",
+            "request": "launch",
+            "mainClass": "db1start_aula01/com.db1.db1start.ExTxt",
+            "projectName": "db1start_aula01"
+        }
+    ]
+}
