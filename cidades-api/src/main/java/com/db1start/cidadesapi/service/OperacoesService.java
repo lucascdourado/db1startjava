@@ -17,53 +17,52 @@ public class OperacoesService {
 	@Autowired
 	private OperacoesRepository operacoesRepository;
 
-	private Integer contarDeposito;
-	private Integer contarSaque;
-	private Integer contarTransferencia;
+	private Integer contarDeposito = 0;
+	private Integer contarSaque = 0;
+	private Integer contarTransferencia = 0;
 	private Date data = new Date();
 
-	public Operacoes novoDeposito(String deposito, Double valor, Conta conta) {
-		conta.setSaldo(conta.getSaldo() + valor);
+	public void novoDeposito(String deposito, Double valor, Conta conta) {
+		Operacoes operacoes = new Operacoes(deposito, valor, conta);
+		conta.setSaldo(conta.getSaldo() + operacoes.getValor());
 		System.out.println("Depósito no valor de R$" + valor + " realizado com sucesso.");
 		System.out.println("Seu novo saldo é de R$" + conta.getSaldo());
 		separar();
 		contarDeposito++;
 		extrato.add("Depósito:      R$" + valor + " - Data: " + data);
-		return operacoesRepository.save("Depósito");
 	}
 
-	public Operacoes novoSaque(String saque, Double valor, Conta conta) {
-		if (valor > conta.getSaldo()) {
+	public void novoSaque(String saque, Double valor, Conta conta) {
+		Operacoes operacoes = new Operacoes(saque, valor, conta);
+		if (operacoes.getValor() > conta.getSaldo()) {
 			System.out.println("SALDO INSULFICIENTE PARA SAQUE");
 			System.out.println("Seu saldo é de R$" + conta.getSaldo());
 			separar();
 		} else {
-			conta.setSaldo(conta.getSaldo() - valor);
-			System.out.println("Saque no valor de R$" + valor + " realizado com sucesso.");
+			conta.setSaldo(conta.getSaldo() - operacoes.getValor());
+			System.out.println("Saque no valor de R$" + operacoes.getValor() + " realizado com sucesso.");
 			System.out.println("Seu novo saldo é de R$" + conta.getSaldo());
 			separar();
 			contarSaque++;
 			extrato.add("Saque:         R$" + valor + " - Data: " + data);
 		}
-		return operacoesRepository.save("Saque");
 	}
 
-	public Operacoes tranferir(String transferir, Double valor, Conta conta) {
-		Conta conta2 = new Conta();
-		if (valor > conta.getSaldo()) {
+	public void novaTransferencia(String transferir, Double valor, Conta conta, Conta conta2) {
+		Operacoes operacoes = new Operacoes(transferir, valor, conta);
+		if (operacoes.getValor() > conta.getSaldo()) {
 			System.out.println("SALDO INSULFICIENTE PARA TRANSFERÊNCIA");
 			System.out.println("Seu saldo é de R$" + conta.getSaldo());
 			separar();
 		} else {
-			conta.setSaldo(conta.getSaldo() - valor);
+			conta.setSaldo(conta.getSaldo() - operacoes.getValor());
 			System.out.println("Tranferência no valor de R$" + valor + " realizado com sucesso.");
 			System.out.println("Seu novo saldo é de R$" + conta.getSaldo());
 			separar();
-			conta2.setSaldo(conta2.getSaldo() + valor);
+			conta2.setSaldo(conta2.getSaldo() + operacoes.getValor());
 			contarTransferencia++;
-			extrato.add("Transferência: R$" + valor + " - Data: " + data);
+			extrato.add("Transferência: R$" + operacoes.getValor() + " - Data: " + data);
 		}
-		return operacoesRepository.save("Transferência");
 	}
 
 	List<String> extrato = new ArrayList<String>();
@@ -80,6 +79,10 @@ public class OperacoesService {
 
 	public void separar() {
 		System.out.println("==============================================================");
+	}
+
+	public void limparOperacoes() {
+		operacoesRepository.deleteAll();
 	}
 
 }

@@ -46,4 +46,12 @@ public class ClienteServiceTest {
 		System.out.println("id: " + teste.getId());
 	}
 
+	@Test
+	public void deveLancarExcecao() {
+		try {
+			clienteService.buscarClientePorNome("Lucas");
+		} catch (RuntimeException ex) {
+			System.out.println(ex.getMessage());
+		}
+	}
 }

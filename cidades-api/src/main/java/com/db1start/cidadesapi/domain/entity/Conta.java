@@ -34,7 +34,7 @@ public class Conta {
 	StatusConta status;
 
 	public Conta() {
-		
+
 	}
 
 	public Conta(Agencia agencia, Cliente cliente) {

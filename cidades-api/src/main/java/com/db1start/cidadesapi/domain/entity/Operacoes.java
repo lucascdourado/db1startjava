@@ -16,31 +16,31 @@ public class Operacoes {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
-	@Column(name= "tipo", length = 60)
+
+	@Column(name = "tipo", length = 60)
 	private String nomeOp;
-	
-	@Column(name ="valor")
+
+	@Column(name = "valor")
 	private Double valor;
-	
+
 	@ManyToOne
 	@JoinColumn
 	private Conta conta;
-		
+
 	public Operacoes(String nomeOp, Double valor, Conta conta) {
 		this.conta = conta;
 		this.nomeOp = nomeOp;
 		this.valor = valor;
 	}
-	
+
 	public Operacoes() {
-		
+
 	}
 
 	public Long getId() {
 		return id;
 	}
-	
+
 	public Conta getConta() {
 		return conta;
 	}

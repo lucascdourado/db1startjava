@@ -19,16 +19,17 @@ public class ContaService {
 		return contaRepository.save(conta);
 	}
 
-	public Conta bucarContaPorId(Long id) {
+	public Conta buscarContaPorId(Long id) {
 		return contaRepository.findById(id)
 				.orElseThrow(() -> new RuntimeException("conta com id " + id + " não encontrada"));
 	}
 
-	public void apagarContaPorId(Long id) {
+	public void excluirContaPorId(Long id) {
 		contaRepository.deleteById(id);
 	}
 
-	public void apagarConta() {
+	public void limparConta() {
 		contaRepository.deleteAll();
 	}
+
 }

@@ -19,9 +19,9 @@ import javax.persistence.Table;
 @Table(name = "agencia")
 public class Agencia {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+//	@Id
+//	@GeneratedValue(strategy = GenerationType.IDENTITY)
+//	private Long id;
 
 	@Column(name = "numeroAg")
 	private String numeroAg;
@@ -40,7 +40,7 @@ public class Agencia {
 
 	}
 
-	public Agencia(String numeroAg, String banco, Cidade cidade, List<Conta>conta) {
+	public Agencia(String numeroAg, String banco, Cidade cidade, List<Conta> conta) {
 		if (numeroAg == null) {
 			throw new RuntimeException("Número da agência não pode ser nulo");
 		}

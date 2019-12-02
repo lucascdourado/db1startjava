@@ -32,10 +32,14 @@ public class Estado {
 		this.cidades = new ArrayList<>();
 	}
 
+	public Estado() {
+		this.cidades = new ArrayList<>();
+	}
+
 	public String getNome() {
 		return nome;
 	}
-	
+
 	public Long getId() {
 		return id;
 	}
