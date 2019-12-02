@@ -31,10 +31,6 @@ public class Estado {
 		this.nome = nome;
 		this.cidades = new ArrayList<>();
 	}
-	
-	public Estado() {
-		this.cidades = new ArrayList<>();
-	}
 
 	public String getNome() {
 		return nome;
