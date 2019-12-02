@@ -19,9 +19,9 @@ import javax.persistence.Table;
 @Table(name = "agencia")
 public class Agencia {
 
-//	@Id
-//	@GeneratedValue(strategy = GenerationType.IDENTITY)
-//	private Long id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 
 	@Column(name = "numeroAg")
 	private String numeroAg;
